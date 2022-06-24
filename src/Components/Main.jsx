@@ -4,7 +4,12 @@ import Pokeinfo from "./Pokeinfo";
 import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
+import "./style.css";
+
 const Main = () => {
+  let imgUrl =
+    "https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png";
+
   const [pokeData, setPokeData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [url, setUrl] = useState("https://pokeapi.co/api/v2/pokemon/");
@@ -35,6 +40,13 @@ const Main = () => {
   }, [url]);
   return (
     <>
+      <nav>
+        <div />
+        <div>
+          <img src={imgUrl} alt="pokeapi-logo" className="navbar-image" />
+        </div>
+        <div> </div>
+      </nav>
       <div className="container">
         <div className="left-content">
           <Card

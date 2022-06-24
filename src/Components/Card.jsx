@@ -12,12 +12,12 @@ const Card = ({ pokemon, loading, infoPokemon }) => {
               <div
                 className="card"
                 key={item.id}
-                style={{ cursor: "pointer" }}
+                style={{ cursor: "pointer", textTransform: "capitalize" }}
                 onClick={() => infoPokemon(item)}
               >
                 <h2>{item.id}</h2>
                 <img src={item.sprites.front_default} alt="" />
-                <h2>{item.name}</h2>
+                <h3>{item.name}</h3>
               </div>
             </>
           );

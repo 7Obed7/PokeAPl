@@ -25,7 +25,7 @@ const Pokeinfo = ({ data }) => {
               return (
                 <>
                   <div className="group">
-                    <h5>{poke.ability.name}</h5>
+                    <h5 className="prim">{poke.ability.name}</h5>
                   </div>
                 </>
               );
@@ -35,7 +35,7 @@ const Pokeinfo = ({ data }) => {
             {data.stats.map((poke) => {
               return (
                 <>
-                  <h6>
+                  <h6 className="prim">
                     <b>
                       {poke.stat.name}:{poke.base_stat}
                     </b>
